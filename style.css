@@ -240,6 +240,61 @@ main {
     }
 
     .content-wrapper {
-        padding: 2.5rem;
+        padding: 3rem 2rem;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 4rem 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    main {
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    .index-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .chapter-card {
+        padding: 1.5rem;
+    }
+
+    .content-wrapper {
+        padding: 2rem 1.05rem;
+        border-radius: 16px;
+    }
+
+    .summary-box {
+        padding: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .key-points h2 {
+        font-size: 1.5rem;
+    }
+
+    .text-zh {
+        font-size: 1.1rem;
+    }
+
+    .bilingual-section {
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
     }
 }
