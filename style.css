@@ -1,0 +1,245 @@
+:root {
+    --primary-bg: #ffffff;
+    --secondary-bg: #fcfdfe;
+    /* 極淡的冷調藍灰，增加層次感 */
+    --accent-color: #3b82f6;
+    /* 現代感明亮藍 */
+    --accent-soft: #eff6ff;
+    --accent-deep: #1d4ed8;
+    --text-main: #0f172a;
+    /* 深 slate 色，對比清晰 */
+    --text-muted: #64748b;
+    --border-color: #f1f5f9;
+    --card-bg: #ffffff;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--secondary-bg);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.8;
+}
+
+header {
+    background: white;
+    padding: 6rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #60a5fa, #93c5fd);
+}
+
+h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+main {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.index-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.chapter-card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    border: 1px solid var(--border-color);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+}
+
+.chapter-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.chapter-number {
+    font-family: var(--font-heading);
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.chapter-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: #1e293b;
+    font-family: var(--font-heading);
+}
+
+.chapter-summary {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Chapter Specific Styles */
+.content-wrapper {
+    background: white;
+    padding: 5rem;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--border-color);
+}
+
+.summary-box {
+    background: var(--accent-soft);
+    padding: 2.5rem;
+    border-radius: 16px;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.summary-box h2 {
+    color: var(--accent-deep);
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.key-points {
+    margin-bottom: 4rem;
+}
+
+.key-points h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.key-points h2::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 24px;
+    background: var(--accent-color);
+    border-radius: 10px;
+}
+
+.key-points ul {
+    list-style: none;
+}
+
+.key-points li {
+    padding: 1rem;
+    border-bottom: 1px solid #f8fafc;
+    color: #334155;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.key-points li::marker {
+    content: '→';
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.bilingual-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.lang-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.text-en {
+    font-style: italic;
+    color: #64748b;
+    font-size: 1.05rem;
+    border-left: 3px solid #f1f5f9;
+    padding-left: 1.5rem;
+}
+
+.text-zh {
+    color: var(--text-main);
+    font-size: 1.15rem;
+    font-weight: 450;
+    line-height: 1.8;
+}
+
+.back-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: var(--accent-color);
+}
+
+@media (max-width: 1000px) {
+    .bilingual-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .content-wrapper {
+        padding: 2.5rem;
+    }
+}

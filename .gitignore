@@ -1,0 +1,15 @@
+# Python scripts
+*.py
+__pycache__/
+
+# Text source files
+content_full.txt
+content_utf8.txt
+
+# Virtual environments
+.venv/
+env/
+
+# OS files
+.DS_Store
+Thumbs.db
